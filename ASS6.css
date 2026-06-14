@@ -1,0 +1,98 @@
+/* CSS Variables */
+:root{
+    --primary-color:#4caf50;
+    --secondary-color:#1a1a2e;
+    --text-color:#ffffff;
+    --card-color:#16213e;
+    --shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:var(--secondary-color);
+    color:var(--text-color);
+}
+
+/* Portfolio Section */
+.portfolio{
+    text-align:center;
+    padding:60px 20px;
+}
+
+/* Animation */
+.title{
+    color:var(--primary-color);
+    margin-bottom:20px;
+
+    animation:fadeIn 2s ease;
+}
+
+.intro{
+    margin-bottom:40px;
+}
+
+/* Cards Layout */
+.projects{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+/* Project Cards */
+.card{
+    background:var(--card-color);
+    width:280px;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:var(--shadow);
+
+    transition:all 0.3s ease;
+}
+
+/* Transform + Transition */
+.card:hover{
+    transform:translateY(-10px) scale(1.05);
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    margin-top:40px;
+
+    background:var(--primary-color);
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 25px;
+    border-radius:8px;
+
+    transition:all 0.3s ease;
+}
+
+.btn:hover{
+    background:#388e3c;
+    transform:scale(1.1);
+}
+
+/* Keyframes Animation */
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(-30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
